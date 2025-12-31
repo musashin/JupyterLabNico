@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+    dockerjupytercontainer:
+        image: "dockerjupyter:1.0"
+        ports:
+          - 8765:8765
+        volumes:
+            - ./jupyter/input:/opt/service/input
+            - ./jupyter/notebooks:/opt/service/notebooks
+        command: ["jupyter-lab", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--port=8765", --NotebookApp.password='', "--NotebookApp.token=''"]      
+
