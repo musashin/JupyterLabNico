@@ -4,5 +4,7 @@ jupyterlab
 pandas
 hydroq-api
 python-dotenv
+matplotlib
+scipy
 
 
