@@ -2,4 +2,7 @@ numpy
 jupyter
 jupyterlab
 pandas
+hydroq-api
+python-dotenv
+
 

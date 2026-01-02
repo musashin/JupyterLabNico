@@ -1,7 +1,7 @@
 version: "3.4"
 services:
     dockerjupytercontainer:
-        image: "dockerjupyter:1.0"
+        image: "dockerjupyter:1.1"
         ports:
           - 8765:8765
         volumes:

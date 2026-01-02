@@ -3,7 +3,7 @@ DOCKERPATH="docker"
 
 # forbiden character : "_", "-", " ", and uppercase
 NAME="dockerjupyter"
-VERSION='1.0'
+VERSION='1.1'
 
 # continue docker image existance check
 DOCKERFILE=$DOCKERPATH//"Dockerfile"
