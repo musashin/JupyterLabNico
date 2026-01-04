@@ -6,5 +6,7 @@ hydroq-api
 python-dotenv
 matplotlib
 scipy
-
-
+gpxpy
+scikit-learn
+seaborn
+geopy
