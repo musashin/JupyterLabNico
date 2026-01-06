@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  hiking-predictor:
+    build:
+      context: ..
+      dockerfile: hiking_predictor_app/Dockerfile
+      args:
+        USER_ID: ${UID:-1000}
+        GROUP_ID: ${GID:-1000}
+    container_name: hiking-predictor-app
+    ports:
+      - "3000:3000"  # Frontend
+      - "8000:8000"  # Backend API
+    volumes:
+      # Mount the model file (optional - already copied in build)
+      - ./data/hiking_speed_model.pkl:/app/data/hiking_speed_model.pkl:ro
+    environment:
+      - REFLEX_DEPLOY_URL=http://0.0.0.0:3000
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - hiking-net
+
+networks:
+  hiking-net:
+    driver: bridge
